@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.className} ${quicksand.variable} ${twinkleStar.variable} antialiased bg-gray-900 w-screen min-h-screen grid grid-cols-1 lg:grid-cols-[260px_1fr]`}
+        className={`${manrope.className} ${quicksand.variable} ${twinkleStar.variable} antialiased bg-[rgb(31,31,31)] w-screen min-h-screen grid grid-cols-1 lg:grid-cols-[260px_1fr]`}
       >
         <Navbar />
         <main className="overflow-auto">{children}</main>
