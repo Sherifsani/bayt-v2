@@ -10,9 +10,9 @@ const MainHero = () => {
   });
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-[1fr_3fr_1fr] w-full min-h-screen lg:min-h-0">
+    <section className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] w-full min-h-screen lg:min-h-0">
       <div className="hidden lg:block w-full h-full"></div>
-      <div className="hero w-full h-full flex flex-col justify-center gap-8 items-start border-x border-gray-600/20 border-dashed py-12 px-6 lg:px-12 relative overflow-hidden">
+      <div className="hero w-full h-full flex flex-col justify-center gap-8 items-start border-x border-gray-200/20 border-dashed py-12 px-6 lg:px-12 relative overflow-hidden">
         {/* Status Badge */}
         <div className="inline-flex items-center gap-2 text-xs text-gray-300 bg-gray-700/20 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-600/30">
           <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
