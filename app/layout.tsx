@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Quicksand, Twinkle_Star } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import MobileNavbar from "./components/MobileNavbar";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -33,8 +34,9 @@ export default function RootLayout({
       <body
         className={`${manrope.className} ${quicksand.variable} ${twinkleStar.variable} antialiased bg-[rgb(31,31,31)] w-screen min-h-screen grid grid-cols-1 lg:grid-cols-[260px_1fr]`}
       >
+        <MobileNavbar />
         <Navbar />
-        <main className="overflow-auto">{children}</main>
+        <main className="overflow-auto lg:mt-0 mt-16">{children}</main>
       </body>
     </html>
   );

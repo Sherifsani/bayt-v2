@@ -6,7 +6,7 @@ import Resources from "./Resources";
 
 const Navbar = () => {
   return (
-    <header className="h-screen w-full bg-[rgb(31,31,31)] border-r border-gray-700 py-4 lg:flex lg:flex-col hidden">
+    <header className="h-screen w-full bg-[rgb(31,31,31)] border-r border-gray-700 py-4 lg:flex lg:flex-col hidden z-50">
       <div className="flex-1">
         <Logo />
         <nav className="mt-8 space-y-8 px-4 border-t border-gray-700/50 border-dashed">
