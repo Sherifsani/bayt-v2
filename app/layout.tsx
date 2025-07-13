@@ -1,17 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Manrope, Quicksand } from "next/font/google";
+import { Manrope, Quicksand, Twinkle_Star } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 const quicksand = Quicksand({
   variable: "--font-quicksand",
   subsets: ["latin"],
@@ -21,6 +12,11 @@ const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+});
+const twinkleStar = Twinkle_Star({
+  variable: "--font-twinkle-star",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${manrope.className} ${quicksand.variable} antialiased bg-gray-900 w-screen min-h-screen grid grid-cols-1 lg:grid-cols-[260px_1fr]`}
+        className={`${manrope.className} ${quicksand.variable} ${twinkleStar.variable} antialiased bg-gray-900 w-screen min-h-screen grid grid-cols-1 lg:grid-cols-[260px_1fr]`}
       >
         <Navbar />
         <main className="overflow-auto">{children}</main>
