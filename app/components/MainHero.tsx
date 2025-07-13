@@ -1,5 +1,6 @@
 import React from "react";
 import { HiMail, HiClock } from "react-icons/hi";
+import { BackgroundBeams } from "./ui/background-beams";
 
 const MainHero = () => {
   const currentTime = new Date().toLocaleTimeString("en-US", {
@@ -10,8 +11,8 @@ const MainHero = () => {
 
   return (
     <section className="grid grid-cols-1 lg:grid-cols-[1fr_3fr_1fr] w-full min-h-screen lg:min-h-0">
-      <div className="w-full h-full"></div>
-      <div className="hero w-full h-full flex flex-col justify-center gap-8 items-start border-x border-gray-600/20 border-dashed py-12 px-6 lg:px-12">
+      <div className="hidden lg:block w-full h-full"></div>
+      <div className="hero w-full h-full flex flex-col justify-center gap-8 items-start border-x border-gray-600/20 border-dashed py-12 px-6 lg:px-12 relative overflow-hidden">
         {/* Status Badge */}
         <div className="inline-flex items-center gap-2 text-xs text-gray-300 bg-gray-700/20 backdrop-blur-sm px-3 py-2 rounded-full border border-gray-600/30">
           <div className="w-2 h-2 bg-gray-400 rounded-full animate-pulse"></div>
@@ -20,7 +21,7 @@ const MainHero = () => {
 
         {/* Main Heading */}
         <div className="space-y-4">
-          <h1 className="text-white text-4xl  font-bold leading-tight">
+          <h1 className="text-white text-4xl font-quicksand font-bold leading-tight">
             I'm <span className="text-gray-100 font-twinkle-star">Sherif</span>
             , turning ideas into <br className="hidden sm:block" />
             <span className="relative">
@@ -54,12 +55,17 @@ const MainHero = () => {
           </div>
         </div>
 
+        {/* Background Beams - contained within hero section */}
+        <div className="absolute inset-0 pointer-events-none">
+          <BackgroundBeams />
+        </div>
+
         {/* Subtle decorative element */}
         <div className="absolute top-1/2 right-8 -translate-y-1/2 opacity-5 pointer-events-none">
           <div className="w-64 h-64 bg-gray-500/20 rounded-full blur-3xl"></div>
         </div>
       </div>
-      <div className="w-full h-full"></div>
+      <div className="w-full h-full hidden lg:block"></div>
     </section>
   );
 };
