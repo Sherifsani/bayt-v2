@@ -12,9 +12,9 @@ const DownloadCV = () => {
   return (
     <div className="text-gray-200 flex flex-col gap-4 px-4">
       {/* Date/Location Card */}
-      <div className="bg-[rgb(31,31,31)]/50 backdrop-blur-sm px-4 py-3 rounded-xl border border-gray-600/30 hover:border-gray-500/50 transition-all duration-300 border-dashed">
-        <p className="text-sm font-medium text-white">{formattedDate}</p>
-        <p className="text-xs text-gray-400 mt-1">Lagos, Nigeria</p>
+      <div className="bg-[rgb(31,31,31)]/50 backdrop-blur-sm p-5 rounded-xl border border-gray-600/30 hover:border-gray-500/50 transition-all duration-300 border-dashed flex flex-col gap-2">
+        <p className="text-lg font-medium text-white">{formattedDate}</p>
+        <p className="text-sm text-gray-400 mt-1">Lagos, Nigeria</p>
       </div>
 
       {/* Download Button */}
