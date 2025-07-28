@@ -3,6 +3,7 @@ import { Manrope, Quicksand, Twinkle_Star, Space_Grotesk } from "next/font/googl
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import MobileNavbar from "./components/MobileNavbar";
+import Footer from "./components/Footer";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -45,6 +46,7 @@ export default function RootLayout({
         <main className="overflow-auto lg:ml-[260px] lg:mt-0 mt-16">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
