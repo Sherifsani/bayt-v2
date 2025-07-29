@@ -30,9 +30,9 @@ const ProjectRow = ({
         <img src="/featured/featured-img-1.png" className="w-full" alt="" />
       </div>
       {/* Project Info */}
-      <div className="flex-1 space-y-2">
+      <div className="flex-1 flex flex-col items-start w-full pl-4 pt-4">
         <div className="flex items-center gap-4">
-          <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-gray-200 transition-colors">
+          <h3 className="font-medium text-white group-hover:text-gray-200 transition-colors">
             {project.title}
           </h3>
           <span className="text-sm text-gray-500">{project.year}</span>
@@ -49,7 +49,6 @@ const ProjectRow = ({
       {/* Action */}
       <div className="flex items-center">
         <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group/btn opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <span>View</span>
           <svg
             className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
             fill="none"
