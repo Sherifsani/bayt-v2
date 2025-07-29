@@ -18,7 +18,7 @@ const DownloadCV = () => {
       </div>
 
       {/* Download Button */}
-      <button className="group flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-rgb[43,43,43] to-rgb[20,20,20] border border-gray-600/30 border-dashed hover:border-blue-400/50 hover:from-blue-600/20 hover:to-purple-600/20 transition-all duration-300 backdrop-blur-sm">
+      <button className="group flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-gradient-to-r from-rgb[43,43,43] to-rgb[20,20,20] border border-gray-600/30 border-dashed hover:border-gray-200/50 hover:from-gray-400/80 hover:to-gray-100/70 transition-all duration-300 backdrop-blur-sm ">
         <GoDownload className="w-4 h-4 text-gray-500 group-hover:text-blue-300 transition-colors duration-300" />
         <span className="text-sm font-medium text-gray-200 group-hover:text-white transition-colors duration-300">
           Download CV
