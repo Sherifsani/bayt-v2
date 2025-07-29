@@ -1,0 +1,171 @@
+"use client";
+
+import React from "react";
+import { motion } from "motion/react";
+
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  year: string;
+  description: string;
+  link?: string;
+}
+
+const ProjectRow = ({
+  project,
+  index,
+}: {
+  project: Project;
+  index: number;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.1 }}
+      className="group flex flex-col items-center justify-between pb-6 border border-white/10 hover:border-white/20 transition-all duration-300 bg-white/5 backdrop-blur-md rounded-xl mb-8 overflow-hidden shadow-lg shadow-black/20"
+    >
+      <div className="project-image w-full">
+        <img src="/featured/featured-img-1.png" className="w-full" alt="" />
+      </div>
+      {/* Project Info */}
+      <div className="flex-1 space-y-2">
+        <div className="flex items-center gap-4">
+          <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-gray-200 transition-colors">
+            {project.title}
+          </h3>
+          <span className="text-sm text-gray-500">{project.year}</span>
+        </div>
+
+        <div className="flex items-center gap-6">
+          <span className="text-sm text-gray-400">{project.category}</span>
+          <p className="text-sm text-gray-400 max-w-md">
+            {project.description}
+          </p>
+        </div>
+      </div>
+
+      {/* Action */}
+      <div className="flex items-center">
+        <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors group/btn opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <span>View</span>
+          <svg
+            className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+            />
+          </svg>
+        </button>
+      </div>
+    </motion.div>
+  );
+};
+
+const ProjectGrid = () => {
+  const projects: Project[] = [
+    {
+      id: 1,
+      title: "TaskFlow",
+      category: "AI Platform",
+      year: "2024",
+      description:
+        "AI-driven keyword research platform for content optimization",
+    },
+    {
+      id: 2,
+      title: "E-Commerce Platform",
+      category: "Full-Stack Web",
+      year: "2024",
+      description: "Complete e-commerce solution with payment processing",
+    },
+    {
+      id: 3,
+      title: "Mobile Banking App",
+      category: "Mobile Development",
+      year: "2024",
+      description: "Secure banking app with biometric authentication",
+    },
+    {
+      id: 4,
+      title: "Analytics Dashboard",
+      category: "Data Visualization",
+      year: "2024",
+      description: "Real-time business metrics with interactive charts",
+    },
+    {
+      id: 5,
+      title: "Healthcare Portal",
+      category: "Healthcare Tech",
+      year: "2023",
+      description: "Patient management with telemedicine capabilities",
+    },
+    {
+      id: 6,
+      title: "Cloud Infrastructure",
+      category: "DevOps",
+      year: "2023",
+      description: "Scalable AWS infrastructure with CI/CD pipelines",
+    },
+    {
+      id: 7,
+      title: "Social Media App",
+      category: "Mobile & Web",
+      year: "2023",
+      description: "Cross-platform social networking application",
+    },
+    {
+      id: 8,
+      title: "Inventory Management",
+      category: "Enterprise Software",
+      year: "2023",
+      description: "Real-time inventory tracking and management system",
+    },
+  ];
+
+  return (
+    <section className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] w-full">
+      <div className="hidden lg:block"></div>
+      <div className="w-full px-6 lg:px-12 md:border-x border-gray-200/10 border-dashed">
+        <div className="max-w-4xl mx-auto py-8">
+          {/* Section Header */}
+          <div className="mb-8">
+            <h3 className="text-sm text-gray-400 uppercase tracking-wider mb-4">
+              All Projects
+            </h3>
+          </div>
+
+          {/* Projects List */}
+          <div className="space-y-0">
+            {projects.map((project, index) => (
+              <ProjectRow key={project.id} project={project} index={index} />
+            ))}
+          </div>
+
+          {/* Footer */}
+          <div className="mt-12 pt-8 border-t border-gray-800/50">
+            <p className="text-sm text-gray-500 text-center">
+              More projects available on{" "}
+              <a
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors underline"
+              >
+                GitHub
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="hidden lg:block"></div>
+    </section>
+  );
+};
+
+export default ProjectGrid;
