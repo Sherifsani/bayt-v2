@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import {
   RiHomeLine,
   RiUser3Line,
@@ -30,7 +31,7 @@ const NavItems: React.FC<NavItemsProps> = ({
           <li key={item.label} className={itemClassName}>
             <div className="flex items-center gap-3">
               <IconComponent className="w-4 h-4" />
-              <span>{item.label}</span>
+              <Link href={item.href}>{item.label}</Link>
             </div>
           </li>
         );
