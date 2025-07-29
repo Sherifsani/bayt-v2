@@ -11,7 +11,7 @@ const MainHero = () => {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] w-full min-h-screen">
       <div className="hidden lg:block"></div>
-      <div className="w-full min-h-screen flex items-center justify-center px-6 lg:px-12 border-x border-gray-200/20 border-dashed">
+      <div className="w-full min-h-screen flex items-center justify-center px-6 lg:px-12 md:border-x border-gray-200/20 border-dashed">
         <div className="max-w-4xl mx-auto text-center space-y-16">
           {/* Status Badge */}
           <div className="inline-flex items-center gap-2 text-xs text-gray-400 bg-gray-900/50 px-3 py-1.5 rounded-full border border-gray-700/50">
