@@ -29,10 +29,10 @@ const NavItems: React.FC<NavItemsProps> = ({
         const IconComponent = item.icon;
         return (
           <li key={item.label} className={itemClassName}>
-            <div className="flex items-center gap-3">
+            <Link href={item.href} className="flex items-center gap-3">
               <IconComponent className="w-4 h-4" />
-              <Link href={item.href}>{item.label}</Link>
-            </div>
+              <p>{item.label}</p>
+            </Link>
           </li>
         );
       })}
