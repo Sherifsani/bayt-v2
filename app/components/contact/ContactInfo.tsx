@@ -4,33 +4,33 @@ const ContactInfo = () => {
   const contactDetails = [
     {
       title: "Email",
-      value: "hello@example.com",
+      value: "sanisherif838@gmail.com",
       icon: "email",
-      href: "mailto:hello@example.com",
+      href: "mailto:sanisherif838@gmail.com",
     },
     {
       title: "Phone",
-      value: "+1 (555) 123-4567",
+      value: "+234 (80) 605-177-31",
       icon: "phone",
-      href: "tel:+15551234567",
+      href: "tel:+2348060517731",
     },
     {
       title: "Twitter",
-      value: "@yourhandle",
+      value: "@sherif_san1",
       icon: "twitter",
-      href: "https://twitter.com/yourhandle",
+      href: "https://x.com/sherif_san1",
     },
     {
       title: "LinkedIn",
-      value: "linkedin.com/in/yourprofile",
+      value: "linkedin.com/in/sherifsani",
       icon: "linkedIn",
-      href: "https://linkedin.com/in/yourprofile",
+      href: "https://linkedin.com/in/sheif-sani",
     },
     {
       title: "GitHub",
-      value: "github.com/yourusername",
+      value: "github.com/sherifsani",
       icon: "github",
-      href: "https://github.com/yourusername",
+      href: "https://github.com/sherifsani",
     },
   ];
 
