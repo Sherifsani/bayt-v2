@@ -12,7 +12,7 @@ const ContactForm = () => {
             type="text"
             name="name"
             id="name"
-            className="bg-[rgb(40,40,40)]/40 border border-gray-200/10 rounded-md p-2"
+            className="bg-[rgb(40,40,40)]/40 border border-gray-200/10 rounded-md p-2 focus:outline-none focus:border-gray-400 focus:bg-[rgb(45,45,45)]/50 transition-all duration-200"
             placeholder="Your Name"
           />
         </div>
@@ -24,7 +24,7 @@ const ContactForm = () => {
             type="email"
             name="email"
             id="email"
-            className="bg-[rgb(40,40,40)]/40 border border-gray-200/10 rounded-md p-2"
+            className="bg-[rgb(40,40,40)]/40 border border-gray-200/10 rounded-md p-2 focus:outline-none focus:border-gray-400 focus:bg-[rgb(45,45,45)]/50 transition-all duration-200"
             placeholder="your email"
           />
         </div>
@@ -36,13 +36,13 @@ const ContactForm = () => {
         <textarea
           name="message"
           id="message"
-          className="w-full resize-none h-48 bg-[rgb(40,40,40)]/40 border border-gray-200/10 rounded-md p-2"
+          className="w-full resize-none h-48 bg-[rgb(40,40,40)]/40 border border-gray-200/10 rounded-md p-2 focus:outline-none focus:border-gray-400 focus:bg-[rgb(45,45,45)]/50 transition-all duration-200"
           placeholder="Your message..."
         ></textarea>
       </div>
       <button
         type="submit"
-        className="bg-white w-full border-none rounded-lg text-black px-4 py-3 hover:bg-gray-200 transition-colors duration-300"
+        className="bg-white w-full border-none rounded-lg text-black px-4 py-3 hover:bg-gray-200 focus:outline-none focus:bg-gray-100 transition-all duration-300"
       >
         Submit
       </button>
