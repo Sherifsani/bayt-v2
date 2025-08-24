@@ -9,8 +9,6 @@ import { FaCalendar } from "react-icons/fa6";
 interface Project {
   id: number;
   title: string;
-  category: string;
-  year: string;
   description: string;
   link?: string;
 }
@@ -42,7 +40,6 @@ const ProjectRow = ({
         </div>
 
         <div className="flex items-center gap-6">
-          <span className="text-sm text-gray-500 flex items-center"><FaCalendar className="mr-2"/>{project.year}</span>
           {/* <span className="text-sm text-gray-400">{project.category}</span> */}
           <p className="text-sm text-gray-400 max-w-md">
             {project.description}
@@ -58,58 +55,42 @@ const ProjectGrid = () => {
     {
       id: 1,
       title: "TaskFlow",
-      category: "AI Platform",
-      year: "2024",
       description:
         "AI-driven keyword research platform for content optimization",
     },
     {
       id: 2,
       title: "E-Commerce Platform",
-      category: "Full-Stack Web",
-      year: "2024",
       description: "Complete e-commerce solution with payment processing",
     },
     {
       id: 3,
       title: "Mobile Banking App",
-      category: "Mobile Development",
-      year: "2024",
       description: "Secure banking app with biometric authentication",
     },
     {
       id: 4,
       title: "Analytics Dashboard",
-      category: "Data Visualization",
-      year: "2024",
       description: "Real-time business metrics with interactive charts",
     },
     {
       id: 5,
       title: "Healthcare Portal",
-      category: "Healthcare Tech",
-      year: "2023",
       description: "Patient management with telemedicine capabilities",
     },
     {
       id: 6,
       title: "Cloud Infrastructure",
-      category: "DevOps",
-      year: "2023",
       description: "Scalable AWS infrastructure with CI/CD pipelines",
     },
     {
       id: 7,
       title: "Social Media App",
-      category: "Mobile & Web",
-      year: "2023",
       description: "Cross-platform social networking application",
     },
     {
       id: 8,
       title: "Inventory Management",
-      category: "Enterprise Software",
-      year: "2023",
       description: "Real-time inventory tracking and management system",
     },
   ];

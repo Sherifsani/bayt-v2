@@ -26,12 +26,6 @@ const ContactInfo = () => {
       icon: "linkedIn",
       href: "https://linkedin.com/in/sheif-sani",
     },
-    {
-      title: "GitHub",
-      value: "github.com/sherifsani",
-      icon: "github",
-      href: "https://github.com/sherifsani",
-    },
   ];
 
   const getIcon = (iconType: string) => {
@@ -94,7 +88,7 @@ const ContactInfo = () => {
   return (
     <div className="text-gray-200">
       <div className="mb-8">
-        <h3 className="font-bold text-white mb-2">Contact me 👋</h3>
+        <h3 className="font-bold text-white mb-2">Say Hi 👋</h3>
       </div>
 
       <div className="space-y-4">
