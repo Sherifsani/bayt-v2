@@ -1,4 +1,6 @@
 import React from "react";
+import FaLink from "next/link"
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
@@ -11,12 +13,12 @@ const AboutSection = () => {
         {/* Header Section */}
         <div className="w-full flex justify-between items-center relative z-10">
           <h2 className="text-lg font-bold bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
-            Who I am
+            A little about me
           </h2>
           <button className="group text-sm text-gray-400 hover:text-white transition-all duration-300 border border-gray-600/40 hover:border-gray-500/60 px-4 py-2 rounded-lg backdrop-blur-sm bg-gray-700/20 hover:bg-gray-600/30">
-            <span className="group-hover:mr-2 transition-all duration-300">
+            <Link href="/about" className="group-hover:mr-2 transition-all duration-300">
               see more
-            </span>
+            </Link>
             <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">
               →
             </span>

@@ -2,6 +2,9 @@
 
 import React from "react";
 import { motion } from "motion/react";
+import { MdOutlineArrowOutward } from "react-icons/md";
+import { FaCalendar } from "react-icons/fa6";
+
 
 interface Project {
   id: number;
@@ -24,43 +27,27 @@ const ProjectRow = ({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.1 }}
-      className="group flex items-center justify-between py-6 border-b border-white/10 hover:border-white/20 transition-all duration-300 bg-white/5 backdrop-blur-md rounded-xl mb-8 overflow-hidden shadow-lg shadow-black/20 px-6"
+      className="group flex flex-col items-center justify-between pb-6 border border-white/10 hover:border-white/20 transition-all duration-300 bg-white/5 backdrop-blur-md rounded-xl mb-8 overflow-hidden shadow-lg shadow-black/20"
     >
+      <div className="project-image w-full">
+        <img src="/featured/featured-img-1.png" className="w-full" alt="" />
+      </div>
       {/* Project Info */}
-      <div className="flex-1 space-y-2">
-        <div className="flex items-center gap-4">
-          <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-gray-200 transition-colors">
+      <div className="flex-1 flex flex-col items-start w-full px-4 pt-4 gap-2">
+        <div className="flex items-center gap-4 justify-between w-full">
+          <h3 className="font-medium text-white group-hover:text-gray-200 transition-colors">
             {project.title}
           </h3>
-          <span className="text-sm text-gray-500">{project.year}</span>
+          <MdOutlineArrowOutward className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
         </div>
 
         <div className="flex items-center gap-6">
-          <span className="text-sm text-gray-400">{project.category}</span>
+          <span className="text-sm text-gray-500 flex items-center"><FaCalendar className="mr-2"/>{project.year}</span>
+          {/* <span className="text-sm text-gray-400">{project.category}</span> */}
           <p className="text-sm text-gray-400 max-w-md">
             {project.description}
           </p>
         </div>
-      </div>
-
-      {/* Action */}
-      <div className="flex items-center">
-        <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-all group/btn opacity-0 group-hover:opacity-100 duration-300">
-          <span>View</span>
-          <svg
-            className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-            />
-          </svg>
-        </button>
       </div>
     </motion.div>
   );

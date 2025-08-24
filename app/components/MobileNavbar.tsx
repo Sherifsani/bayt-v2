@@ -61,7 +61,7 @@ const MobileNavbar = () => {
         </div>
 
         {/* Navigation Content */}
-        <div className="px-4 py-6 space-y-8">
+        <div className="px-4 py-6 space-y-8" onClick={toggleMenu}>
           <NavItems
             className="space-y-2"
             itemClassName="text-gray-400 hover:text-white cursor-pointer px-4 py-3 rounded-lg hover:bg-[rgb(45,45,45)] transition-all duration-200 text-base font-medium"
