@@ -1,8 +1,10 @@
 import BlogCard from "@/app/components/blog/BlogCard";
 import { getSortedPostsData } from "@/lib/posts";
 
+
 const Page = () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData: { [p: string]: any, id: any }[] = getSortedPostsData();
+
   return (
     <main className="w-full grid grid-cols-1 lg:grid-cols-[1fr_2fr_1fr] min-h-screen bg-[rgb(20,20,20)] text-white dark:text-black">
       <div className={"hidden lg:block"}></div>
@@ -15,8 +17,8 @@ const Page = () => {
         </div>
         <div className="pt-5 flex flex-col gap-8">
           <div className="grid grid-cols-1  gap-6">
-            {allPostsData.map(({ id, date, title }) => (
-              <BlogCard key={id} id={id} title={title} date={date} />
+            {allPostsData.map((post) => (
+              <BlogCard key={post.id} id={post?.id} title={post.title} date={post.date}/>
             ))}
           </div>
         </div>

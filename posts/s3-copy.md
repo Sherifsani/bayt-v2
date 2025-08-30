@@ -3,6 +3,10 @@ title: 'Efficiently copy files between two S3 buckets'
 date: '2025-08-01'
 ---
 
+---
+categories: 'cloud', 'S3', 'automation'
+---
+
 In today's cloud-centric world, efficient data management is crucial, especially when working with **AWS S3 buckets**. AWS S3 is a powerful object storage service that allows you to store and retrieve any amount of data at any time, making it ideal for a variety of use cases such as **backups, migrations, and data synchronization**.  
 
 Automating the process of copying files between S3 buckets can save you time and reduce the potential for errors. In this article, I’ll walk you through a straightforward **Bash script** that facilitates this process while ensuring that AWS credentials are configured correctly.
