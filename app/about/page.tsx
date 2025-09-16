@@ -177,6 +177,17 @@ const AboutPage = () => {
                 </div>
               </div>
             </div>
+
+            {/* Hobbies section */}
+            <div>
+              <h3 className="text-sm text-gray-400 uppercase tracking-wider">
+                Hobbies
+              </h3>
+              <div>
+                <p className="text-gray-300">Here are some of things I like to do in my free time</p>
+                <div></div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="hidden lg:block"></div>

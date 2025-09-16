@@ -3,12 +3,12 @@
 import React from "react";
 import { Carousel } from "@/app/components/ui/apple-cards-carousel";
 import { ProjectCard } from "@/app/components/ui/custom-project-card";
-
+import Link from "next/link"
 const FeaturedWorks = () => {
   const projects = [
     {
       src: "/featured/featured-img-1.png",
-      title: "Plated Value Spa",
+      title: "Audio Notes",
       company: "KonfirmTech inc 2025",
       content: <ProjectContent projectId={1} />,
     },
@@ -42,9 +42,9 @@ const FeaturedWorks = () => {
         <h3 className="md:text-lg font-bold bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
           Featured Works
         </h3>
-        <button className="text-sm text-gray-400 hover:text-white transition-colors duration-200 border border-gray-600/40 hover:border-gray-500/60 px-4 py-2 rounded-lg backdrop-blur-sm bg-gray-700/20">
+        <Link href="/projects" className="text-sm text-gray-400 hover:text-white transition-colors duration-200 border border-gray-600/40 hover:border-gray-500/60 px-4 py-2 rounded-lg backdrop-blur-sm bg-gray-700/20">
           All projects
-        </button>
+        </Link>
       </div>
 
       {/* Apple Carousel */}
@@ -59,8 +59,8 @@ const ProjectContent = ({ projectId }: { projectId: number }) => {
   const projectDetails = {
     1: {
       description:
-        "A modern spa management platform with booking system, customer management, and service scheduling.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe API"],
+        "A serverless application that converts text from images to audio",
+      technologies: ["React", "Textract", "Polly", "Lambda", "Api Gateway"],
       features: [
         "Online Booking",
         "Customer Portal",
