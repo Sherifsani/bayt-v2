@@ -6,6 +6,7 @@ import {
   RiBriefcaseFill,
   RiMailLine,
 } from "react-icons/ri";
+import { HiDocument } from "react-icons/hi";
 
 interface NavItemsProps {
   className?: string;
@@ -13,14 +14,15 @@ interface NavItemsProps {
 }
 
 const NavItems: React.FC<NavItemsProps> = ({
-  className = "space-y-1",
-  itemClassName = "text-gray-400 hover:text-white cursor-pointer px-3 py-2 rounded-lg hover:bg-[rgb(45,45,45)] transition-all duration-200 text-sm font-medium",
+  className = "flex-col flex w-full px-2",
+  itemClassName = "hover:text-white cursor-pointer py-5 rounde hover:bg-[rgb(45,45,45)] transition-all duration-200 text-sm font-medium border-b border-dashed border-gray-700/10 w-full px-2",
 }) => {
   const navItems = [
     { label: "Home", href: "/", icon: RiHomeLine },
     { label: "About", href: "/about", icon: RiUser3Line },
     { label: "Projects", href: "/projects", icon: RiBriefcaseFill },
     { label: "Contact", href: "/contact", icon: RiMailLine },
+    { label: "Blog", href: "/blog", icon: HiDocument },
   ];
 
   return (
