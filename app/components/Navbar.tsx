@@ -6,7 +6,7 @@ import Resources from "./Resources";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 h-screen w-[260px] bg-gray-100 border-r border-gray-200/10 py-4 lg:flex lg:flex-col hidden z-50">
+    <header className="fixed top-0 left-0 h-screen w-[260px] bg-gray-100 border-r border-gray-700/40 py-4 lg:flex lg:flex-col hidden z-50">
       <div className="flex-1">
         <Logo />
         <nav className="mt8 flex">

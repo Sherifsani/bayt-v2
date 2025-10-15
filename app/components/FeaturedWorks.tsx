@@ -37,7 +37,7 @@ const FeaturedWorks = () => {
   ));
 
   return (
-    <section className="w-full py-12 md:py-16 px-4 md:px-10 border-t border-gray-600/20">
+    <section className="w-full py-12 md:py-16 px-4 md:px-10">
       <div className="w-full flex justify-between items-center  text-gray-300">
         <h3 className="md:text-lg font-bold bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-transparent">
           Featured Works

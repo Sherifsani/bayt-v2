@@ -6,12 +6,12 @@ const MainHero = () => {
       <div className="w-full flex px-3 lg:px-0 mx-auto max-w-[1200px] pt-20 pb-6 border-b border-gray-700/50 border-dashed">
         <div className="w-full">
           {/* Status Badge */}
-          <div className="inline-flex items-center gap-3 text-sm text-black bg-gray-100 p-2 rounded-lg border border-gray-200">
+          <div className="inline-flex items-center gap-3 text-sm text-black bg-gray-200 p-2 rounded-lg border border-gray-200">
             <span
               className="w-2 h-2 bg-green-500 rounded-full inline-block"
               aria-hidden="true"
             />
-            <span className="font-medium">Available for Work</span>
+            <span className="font-medium text-sm">Available for Work</span>
           </div>
 
           {/* Main Content */}
@@ -35,14 +35,14 @@ const MainHero = () => {
             <div className="mt-4 flex items-center gap-4">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold bg-black text-white rounded-md shadow-md hover:opacity-95 transition"
+                className="inline-flex items-center justify-center px-4 py-3 text-sm font-semibold bg-black text-white rounded-md shadow-md hover:opacity-95 transition"
               >
                 Get In Touch
               </a>
 
               <a
                 href="/about"
-                className="inline-flex items-center justify-center px-3 py-2 text-sm font-semibold border rounded-md border-gray-300 text-black bg-white hover:bg-gray-50 transition"
+                className="inline-flex items-center justify-center px-4 py-3 text-sm font-semibold border rounded-md border-gray-300 text-black bg-white hover:bg-gray-50 transition"
               >
                 About Me
               </a>

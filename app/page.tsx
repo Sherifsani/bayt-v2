@@ -5,7 +5,7 @@ import BookMarks from "./components/BookMarks";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[rgb(20,2020)]">
+    <div className="min-h-screen bg-gray-100">
       <MainHero />
       <FeaturedWorks />
       <AboutSection />
